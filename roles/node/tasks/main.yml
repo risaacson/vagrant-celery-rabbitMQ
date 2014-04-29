@@ -1,0 +1,12 @@
+---
+- name: Insall node and npm.
+  yum: name="{{ item }}" state=installed
+  with_items:
+  - nodejs
+  - npm
+
+- name: Sync over our scripts.
+  copy: src=scripts dest=/home/vagrant/ force=yes
+
+- name: Fix the ownership fo the files.
+  file: path=/home/vagrant/scripts group=vagrant owner=vagrant recurse=yes state=directory

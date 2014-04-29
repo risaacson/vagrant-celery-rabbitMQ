@@ -1,0 +1,24 @@
+{
+  "name": "celery-test",
+  "version": "0.0.0",
+  "description": "A Celery Node Test App.",
+  "main": "helloWorld.js",
+  "private": true,
+  "dependencies": {
+      "node-celery": "~0.2.0"
+  },
+  "devDependencies": {
+  },
+  "author": "risaacson",
+  "license": "NONE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/risaacson/vagrant-celery-rabbitMQ"
+  },
+  "bugs": {
+    "url": "https://github.com/risaacson/vagrant-celery-rabbitMQ/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

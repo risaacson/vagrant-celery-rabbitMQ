@@ -16,3 +16,9 @@
   sudo: yes
   roles:
   - celery
+
+- name: Common configuration for all hosts.
+  hosts: node*
+  sudo: yes
+  roles:
+  - node

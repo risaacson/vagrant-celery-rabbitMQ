@@ -26,6 +26,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
+  config.vm.define "node0" do |node0|
+    node0.vm.hostname = "node0"
+    node0.vm.network :private_network, ip: "192.168.251.52"
+
+    config.vm.provider "virtualbox" do | v |
+      v.name = 'node0'
+    end
+  end
+
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "site.yml"
     ansible.verbose = "v"
