@@ -1,0 +1,14 @@
+---
+# Celery
+
+- name: install librabbitmq
+  yum: name="librabbitmq" state=installed
+
+- name: Install Python pip
+  yum: name="python-pip" state=installed
+
+- name: Install Celery
+  pip: name="celery" state=present
+
+- name: Sync over our scripts.
+  copy: src=scripts dest=/home/vagrant/ force=yes

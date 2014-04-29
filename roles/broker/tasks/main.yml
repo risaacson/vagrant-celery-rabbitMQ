@@ -1,0 +1,8 @@
+---
+# broker
+
+- name: RabbitMQ
+  yum: name="rabbitmq-server" state=installed
+
+- name: Start RabbitMQ
+  service: name="rabbitmq-server" enabled=yes state=started
