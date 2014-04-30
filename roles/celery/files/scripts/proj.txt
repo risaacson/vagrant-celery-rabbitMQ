@@ -1,0 +1,12 @@
+In one window:
+cd scripts
+celery --worker --app=proj --loglevel=info
+
+In second window:
+cd scripts
+Execute 'python'.
+
+>>> from proj.tasks import add
+>>> add.delay(2,2)
+
+Look at the worker's output.
